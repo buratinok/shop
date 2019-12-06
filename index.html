@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto+Slab:300,400,700,800&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="body">
+<header class="header">
+    <div class="navbar navbar__info navbar-dark bg-primary justify-content-center pb-0">
+        <div class="container justify-content-center">
+             <div class="d-none d-md-block">
+                 <ul class="list-inline mb-0">
+                     <li class="list-inline-item mr-2">
+                         <a href="#" class="text-reset"><span class="text-white">
+                             <i class="fab fa-facebook-f"> </i>
+                         </span></a>
+                     </li>
+                     <li class="list-inline-item mr-4">
+                         <a href="#" class="text-reset"><span class="text-white">
+                             <i class="fab fa-twitter"> </i>
+                         </span></a>
+                     </li>
+                     <li class="list-inline-item mr-2">
+                         <address class="font_size_12 ">
+                             <span class="text-white px-1"><i class="fas fa-envelope"></i></span>
+                             <a class="text-white text-decoration-none"  href="mailto:Larissa877.88@gmail.com">Larissa877.88@gmail.com</a>
+                         </address>
+    
+                     </li>
+                 </ul>
+             </div>
+            <form class="form-inline form-header d-none d-lg-block mx-auto">
+                <div class="input-group">
+                    <input type="text" class="form-control bg-transparent text-white border-bottom"
+                           placeholder="Найти товар" aria-label="Найти товар"
+                           aria-describedby="button-addon2">
+                    <!--Зависимость кнопки от родителя input-header-top-->
+                    <div class="input-group-append">
+                        <button class="btn btn-search btn-outline-secondary border-bottom" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <div class="text-center">
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item mr-2">
+                        <div class="d-block d-md-none">
+                            <a class="btn btn-outline-info navbar__brand d-block d-md-none" href="#">"Рубежное"</a>
+                        </div>
+                    </li>
+                    <li class="list-inline-item mr-2">
+                        <address class="text-white font_size_12">
+                           <span class="px-1"> <i class="fas fa-phone fa-rotate-90"></i></span>
+                            тел: +38(066) 694-6044
+                        </address>
+    
+                    </li>
+                    <li class="list-inline-item mr-2">
+                        <address class="text-white font_size_12">
+                            <span class="px-1"><i class="fas fa-map-marker-alt"></i></span>
+                            г. Полтава, ул. Шевченка 48
+                        </address>
+                    </li>
+                    <li class="list-inline-item mr-2">
+                        <address class="font_size_12 d-block d-md-none">
+                            <span class="text-white px-1"><i class="fas fa-envelope"></i></span>
+                            <a class="text-white text-decoration-none"  href="mailto:Larissa877.88@gmail.com">Larissa877.88@gmail.com</a>
+                        </address>
+    
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+        <div class="container position-relative">
+            <a class="btn btn-outline-info navbar__brand d-none d-md-block" href="#">"Рубежное"</a>
+    
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample04"
+                    aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="navbar-collapse collapse px-md-2 mx-sm-auto mx-md-2" id="navbarsExample04" style="">
+                <form class="form-inline form-header d-block d-md-none mx-auto my-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control bg-transparent text-white border-bottom p-0"
+                               placeholder="Найти товар" aria-label="Найти товар"
+                               aria-describedby="button-addon2">
+                        <!--Зависимость кнопки от родителя input-header-top-->
+                        <div class="input-group-append">
+                            <button class="btn btn-search btn-outline-secondary border-bottom" type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <menu class="navbar-nav w-100 justify-content-center">
+                    <li class="nav-item mx-1 active">
+                        <a class="nav-link text-uppercase" href="#">Главная</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link text-uppercase" href="#">Купить</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="nav-link text-uppercase" href="#">Контакти</a>
+                    </li>
+                </menu>
+            </div>
+    
+            <form id="shoppingBasket" class="dropdown dropdown__basket dropdown__basket_right my-md-0">
+                <div class="btn-group">
+                    <button type="button" class="btn border-0 bg-transparent">
+                            <span class="text-white">
+                            17,00 грн.
+                        </span>
+                    </button>
+                    <button id="shoppinDropdown" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false"
+                            class="btn btn-outline-light rounded-circle shoppingBasket"
+    
+                    >
+                        <i class="fas fa-shopping-basket"></i>
+                        <span class="badge badge-light rounded-circle position-absolute">2</span>
+                    </button>
+                    <div class="dropdown-menu  dropdown-menu-right shadow-sm p-3 mt-2" aria-labelledby="shoppinDropdown">
+                        <div class="arrow"></div>
+                        <ul class="list-unstyled">
+                            <li class="media position-relative text-decoration-none py-2 mw-100" style="min-width: 250px">
+                                <img src="https://placeimg.com/64/64/any" class="align-self-center mr-3" alt="img">
+                                <div class="media-body">
+                                    <a href="#" class="stretched-link text-decoration-none">
+                                        <p class="text-muted mt-0 mb-1">Media heading</p>
+                                        <s>500$</s> - 200$
+                                    </a>
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </li>
+                            <li class="media position-relative text-decoration-none py-2 mw-100" style="min-width: 250px">
+                                <img src="https://placeimg.com/64/64/any" class="align-self-center mr-3" alt="img">
+                                <div class="media-body">
+                                    <a href="#" class="stretched-link text-decoration-none">
+                                        <p class="text-muted mt-0 mb-1">Media heading</p>
+                                        <s>500$</s> - 200$
+                                    </a>
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="d-flex flex-column my-3 w-100">
+                            <button type="submit" class="btn btn-primary mt-2 p-2">Просмотр корзины</button>
+                            <button type="submit" class="btn btn-warning mt-2 p-2">Оформление заказа</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+    
+        </div>
+    </nav></header>
+<section class="section section__catousel">
+    <div id="myCarousel" class="carousel carousel-fade slide" data-ride="carousel">
+        <ol class="carousel-indicators d-block d-md-none carousel-indicators_top">
+            <li data-target="#myCarousel" data-slide-to="0" class="bg-warning active"></li>
+            <li data-target="#myCarousel" data-slide-to="1" class="bg-warning" ></li>
+            <li data-target="#myCarousel" data-slide-to="2" class="bg-warning" ></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container">
+
+                            <img src="./assets/img/men-women.jpg" class="d-block w-100 h-25" alt="slide1">
+
+                        <div class="carousel-caption text-left h-75 ">
+                            <div class="d-flex flex-column justify-content-between align-items-center carousel-caption-bg p-md-5 p-2">
+                                <img src="./assets/img/grand_socks.png" class="carousel-caption__brand" alt="mavadi brand">
+                                <p class="mt-4"><a class="btn btn-outline-primary" href="#" role="button">
+                                    Зайти магазин</a>
+                                </p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item ">
+                <div class="container">
+
+                            <img src="./assets/img/women.jpg" class="d-block w-100 h-25" alt="slide1">
+
+                        <div class="carousel-caption text-left h-75 ">
+                            <div class="d-flex flex-column justify-content-between align-items-end p-2">
+                                <img src="./assets/img/mavadi-hello.png" class="carousel-caption__brand" alt="mavadi brand">
+                                <p class="mt-4"><a class="btn btn-outline-primary" href="#" role="button">
+                                    Зайти магазин</a>
+                                </p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item ">
+                <div class="container">
+
+                            <img src="./assets/img/kids.jpg" class="d-block w-100 h-25" alt="slide1">
+
+                        <div class="carousel-caption text-left h-75 t-10">
+                            <div class="d-flex flex-column justify-content-between align-items-center p-2">
+                                <img src="./assets/img/socks_brand.png" class="carousel-caption__brand" alt="mavadi brand">
+                                <p class="mt-4"><a class="btn btn-outline-primary" href="#" role="button">
+                                    Зайти магазин</a>
+                                </p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev d-none d-md-flex w-4" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-vertical text-uppercase text-muted" aria-hidden="true">Prev</span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next d-none d-md-flex w-4" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-vertical text-uppercase text-muted" aria-hidden="true">Next</span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</section>
+<section id="sectionColection" class="section section__collection bg-secondary py-5">
+    <div class="container">
+        <div class="row flex-column flex-md-row">
+            <div class="col col-md-4">
+                <div class="card text-right px-3 py-2">
+                    <img src="./assets/img/men.jpg" class="card-img border-3" alt="men socks">
+                    <div class="card-img-overlay">
+                        <div class="bg-white_opacity text-left pl-1 ml-1">
+                            <p class="h5 card-text align-middle font_weight_800">Мужская</p>
+                            <h6 class="card-title text-lowercase font_weight_800"><span
+                                    class="text-primary">100% коллекция</span> носков</h6>
+                            <a href="#" class="d-inline-block font-weight-normal text-truncate text-decoration-none"
+                               style="max-width: 100px;">Носки просмотреть</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-md-4">
+                <div class="card px-3 py-2">
+
+                    <img src="./assets/img/women_colection.jpg" class="card-img border-3" alt="women socks">
+                    <div class="card-img-overlay">
+                        <div class="bg-white_opacity text-left pl-1 ml-1">
+                            <p class="h5 card-text font_weight_800">100% Женская</p>
+                            <h6 class="card-title text-lowercase font_weight_800">
+                                Коллекция <span class="text-primary">ексклюзивная</span>
+                            </h6>
+                            <a href="#" class="d-inline-block font-weight-normal text-truncate text-decoration-none"
+                               style="max-width: 100px;">Носки просмотреть</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-md-4">
+                <div class="card px-3 py-2">
+
+                    <img src="./assets/img/child_colection.jpg" class="card-img border-3" alt="kids socks">
+                    <div class="card-img-overlay">
+                        <div class="bg-white_opacity border-0 text-left pl-1 ml-1">
+                            <p class="h5 card-text font_weight_800">Детская</p>
+                            <h6 class="card-title text-lowercase font_weight_800"><span class="text-primary">Теплая</span>
+                                коллекция  100%
+                            </h6>
+                            <a href="#" class="d-inline-block font-weight-normal text-truncate text-decoration-none"
+                               style="max-width: 100px;">Носки просмотреть</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <div class="media text-left pt-5">
+                    <h2 class="text-primary fas fa-headset mr-4">
+                    </h2>
+                    <div class="media-body pb-3 mb-0 small lh-125  ">
+                        <p class="font-weight-bold text-uppercase">8:00/17:00</p>
+                        <p class="text-muted">Задайте вопрос через контактную форму или созвонитесь с нами по контактному телефону  +38(066) 694-6044</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="media text-left pt-5">
+                    <h2 class="text-primary fas fa-truck mr-4">
+                    </h2>
+                    <div class="media-body pb-3 mb-0 small lh-125  ">
+                        <p class="font-weight-bold text-uppercase">Оптовый сервис</p>
+                        <p class="text-muted">Купить оптом от производителя мужской носок, женский носок и подростковый носок цена соответствует качеству продукции</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="media text-left pt-5">
+                    <h2 class="text-primary fas fa-home mr-4">
+                    </h2>
+                    <div class="media-body pb-3 mb-0 small lh-125  ">
+                        <p class="font-weight-bold text-uppercase">Службой доставки</p>
+                        <p class="text-muted">Доставка заказа по Украине осуществляется службой доставки товар, Вы сможете получить в региональном представительстве</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><section class="section section__logo bg-secondary mt-0">
+
+    <div class="container">
+        <div class="row">
+            <div class="col my-5">
+                <div id="carouselLogo" class="carousel-logo d-flex justify-content-between align-items-center"
+                     data-ride="carousel">
+                    <ol id="carouselLogoIndicators"
+                        class="carousel-inner px-2 list-unstyled d-flex flex-row flex-nowrap justify-content-around">
+                        <li class="carousel-item media d-flex justify-content-center p-1 m-2 active" data-slide-to="0">
+                            <img class="w-75" src="./assets/img/image1.png" alt="Grand">
+                        </li>
+                        <li class="carousel-item media d-flex justify-content-center p-1 m-2 " data-slide-to="1">
+                            <img class="w-75" src="./assets/img/image.png" alt="vividways">
+                        </li>
+                        <li class="carousel-item media d-flex justify-content-center p-1 m-2 " data-slide-to="2">
+                            <img class="w-75" src="./assets/img/image3.png" alt="hobnob">
+                        </li>
+                        <li class="carousel-item media d-flex justify-content-center p-1 m-2 " data-slide-to="3">
+                            <img class="w-75" src="./assets/img/image4.png" alt="burnaboh">
+                        </li>
+                    </ol>
+
+                    <a class="btn btn-light btn-prev position-absolute" href="#carouselLogo" role="button"
+                       data-slide="prev">
+                        <span aria-hidden="true">
+                           <h3 class="fas fa-caret-left m-0"></h3>
+                        </span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="btn btn-light btn-next position-absolute" href="#carouselLogo" role="button"
+                       data-slide="next">
+                        <span aria-hidden="true">
+                            <h3 class="fas fa-caret-right m-0"></h3>
+                        </span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><section class="section section__trending my-5">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="section__list col-md-4 px-4">
+                    <h5 class="position-relative text-md-left text-uppercase font-weight-bold p-2">Популярное</h5>
+                <div class="d-block">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item px-0">
+                            <div class="media flex-md-column flex-lg-row position-relative">
+                                <img src="http://rubizhnesocks.pl.ua/wp-content/uploads/2019/02/belorus-29-min-324x324.jpg"
+                                     class="align-self-center mr-2" width="75" height="75" alt="terending">
+                                <div class="media-body">
+                                    <p class="text-muted font_size_12 p-2 mb-1 text-truncate w-50">Носки
+                                        солдатские р 25,27,29 Украина
+                                        <br>
+                                        <span class="d-block text-primary mt-2">$53 -$300</span>
+                                    </p>
+                                    <div class="d-flex flex-row">
+                                        <button class="btn btn-sm btn-primary font_size_12"
+                                                 >
+                                                 Добавить в корзину
+                                            <span class="pl-2 d-none d-lg-inline-flex">
+                                                    <i class="fas fa-cart-plus"></i></span>
+                                        </button>
+                                        <a href="#" class="btn btn-sm  btn-outline-primary font_size_12 ml-1"><i
+                                                class="far fa-eye"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item px-0">
+                            <div class="media flex-md-column flex-lg-row position-relative">
+                                <img src="http://rubizhnesocks.pl.ua/wp-content/uploads/2019/02/belorus-29-min-324x324.jpg"
+                                     class="align-self-center mr-2" width="75" height="75" alt="terending">
+                                <div class="media-body">
+                                    <p class="text-muted font_size_12 p-2 mb-1 text-truncate w-50">Носки
+                                        солдатские р 25,27,29 Украина
+                                        <br>
+                                        <span class="d-block text-primary mt-2">$53 -$300</span>
+                                    </p>
+                                    <div class="d-flex flex-row">
+                                        <button class="btn btn-sm btn-primary font_size_12"
+                                                 >
+                                                 Добавить в корзину
+                                            <span class="pl-2 d-none d-lg-inline-flex">
+                                                    <i class="fas fa-cart-plus"></i></span>
+                                        </button>
+                                        <a href="#" class="btn btn-sm  btn-outline-primary font_size_12 ml-1"><i
+                                                class="far fa-eye"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item px-0">
+                            <div class="media flex-md-column flex-lg-row position-relative">
+                                <img src="http://rubizhnesocks.pl.ua/wp-content/uploads/2019/02/belorus-29-min-324x324.jpg"
+                                     class="align-self-center mr-2" width="75" height="75" alt="terending">
+                                <div class="media-body">
+                                    <p class="text-muted font_size_12 p-2 mb-1 text-truncate w-50">Носки
+                                        солдатские р 25,27,29 Украина
+                                        <br>
+                                        <span class="d-block text-primary mt-2">$53 -$300</span>
+                                    </p>
+                                    <div class="d-flex flex-row">
+                                        <button class="btn btn-sm btn-primary font_size_12"
+                                                 >
+                                                 Добавить в корзину
+                                            <span class="pl-2 d-none d-lg-inline-flex">
+                                                    <i class="fas fa-cart-plus"></i></span>
+                                        </button>
+                                        <a href="#" class="btn btn-sm  btn-outline-primary font_size_12 ml-1"><i
+                                                class="far fa-eye"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="section__list col-md-4 px-4">
+                <h5 class="position-relative text-md-center text-uppercase font-weight-bold p-2">Новинки</h5>
+                <div class="d-block">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item px-0">
+                            <div class="media flex-md-column flex-lg-row position-relative">
+                                <img src="http://rubizhnesocks.pl.ua/wp-content/uploads/2019/02/belorus-29-min-324x324.jpg"
+                                     class="align-self-center mr-2" width="75" height="75" alt="terending">
+                                <div class="media-body">
+                                    <p class="text-muted font_size_12 p-2 mb-1 text-truncate  w-50">Носки
+                                        солдатские р 25,27,29 Украина
+                                        <br>
+                                        <span class="d-block text-primary mt-2">$53 -$300</span>
+                                    </p>
+                                    <div class="d-flex flex-row">
+                                        <button class="btn btn-sm btn-primary font_size_12"
+                                                >
+                                            Добавить в корзину
+                                            <span class="pl-2 d-none d-lg-inline-flex">
+                                                    <i class="fas fa-cart-plus"></i></span>
+                                        </button>
+                                        <a href="#" class="btn btn-sm btn-outline-primary font_size_12 ml-1"><i
+                                                class="far fa-eye"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item px-0">
+                            <div class="media flex-md-column flex-lg-row position-relative">
+                                <img src="http://rubizhnesocks.pl.ua/wp-content/uploads/2019/02/belorus-29-min-324x324.jpg"
+                                     class="align-self-center mr-2" width="75" height="75" alt="terending">
+                                <div class="media-body">
+                                    <p class="text-muted font_size_12 p-2 mb-1 text-truncate  w-50">Носки
+                                        солдатские р 25,27,29 Украина
+                                        <br>
+                                        <span class="d-block text-primary mt-2">$53 -$300</span>
+                                    </p>
+                                    <div class="d-flex flex-row">
+                                        <button class="btn btn-sm btn-primary font_size_12"
+                                                >
+                                            Добавить в корзину
+                                            <span class="pl-2 d-none d-lg-inline-flex">
+                                                    <i class="fas fa-cart-plus"></i></span>
+                                        </button>
+                                        <a href="#" class="btn btn-sm btn-outline-primary font_size_12 ml-1"><i
+                                                class="far fa-eye"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item px-0">
+                            <div class="media flex-md-column flex-lg-row position-relative">
+                                <img src="http://rubizhnesocks.pl.ua/wp-content/uploads/2019/02/belorus-29-min-324x324.jpg"
+                                     class="align-self-center mr-2" width="75" height="75" alt="terending">
+                                <div class="media-body">
+                                    <p class="text-muted font_size_12 p-2 mb-1 text-truncate  w-50">Носки
+                                        солдатские р 25,27,29 Украина
+                                        <br>
+                                        <span class="d-block text-primary mt-2">$53 -$300</span>
+                                    </p>
+                                    <div class="d-flex flex-row">
+                                        <button class="btn btn-sm btn-primary font_size_12"
+                                                >
+                                            Добавить в корзину
+                                            <span class="pl-2 d-none d-lg-inline-flex">
+                                                    <i class="fas fa-cart-plus"></i></span>
+                                        </button>
+                                        <a href="#" class="btn btn-sm btn-outline-primary font_size_12 ml-1"><i
+                                                class="far fa-eye"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="section__list col-md-4 px-4">
+                <h5 class="position-relative text-right text-uppercase font-weight-bold p-2">Рекомендуем</h5>
+                <div class="d-block">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item px-0">
+                            <div class="media flex-md-column flex-lg-row position-relative">
+                                <img src="http://rubizhnesocks.pl.ua/wp-content/uploads/2019/02/belorus-29-min-324x324.jpg"
+                                     class="align-self-center mr-2" width="75" height="75" alt="terending">
+                                <div class="media-body">
+                                    <p class="text-muted font_size_12 p-2 mb-1 text-truncate w-50">Носки
+                                        солдатские р 25,27,29 Украина
+                                        <br>
+                                        <span class="d-block text-primary mt-2">$53 -$300</span>
+                                    </p>
+                                    <div class="d-flex flex-md-row">
+                                        <button class="btn btn-sm btn-primary font-weight-lighter font_size_12"
+                                                >
+                                            Добавить в корзину
+                                            <span class="pl-2 d-none d-lg-inline-flex">
+                                                    <i class="fas fa-cart-plus"></i></span>
+                                        </button>
+                                        <a href="#" class="btn btn-sm  btn-outline-primary font_size_12 ml-1"><i
+                                                class="far fa-eye"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item px-0">
+                            <div class="media flex-md-column flex-lg-row position-relative">
+                                <img src="http://rubizhnesocks.pl.ua/wp-content/uploads/2019/02/belorus-29-min-324x324.jpg"
+                                     class="align-self-center mr-2" width="75" height="75" alt="terending">
+                                <div class="media-body">
+                                    <p class="text-muted font_size_12 p-2 mb-1 text-truncate w-50">Носки
+                                        солдатские р 25,27,29 Украина
+                                        <br>
+                                        <span class="d-block text-primary mt-2">$53 -$300</span>
+                                    </p>
+                                    <div class="d-flex flex-md-row">
+                                        <button class="btn btn-sm btn-primary font-weight-lighter font_size_12"
+                                                >
+                                            Добавить в корзину
+                                            <span class="pl-2 d-none d-lg-inline-flex">
+                                                    <i class="fas fa-cart-plus"></i></span>
+                                        </button>
+                                        <a href="#" class="btn btn-sm  btn-outline-primary font_size_12 ml-1"><i
+                                                class="far fa-eye"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item px-0">
+                            <div class="media flex-md-column flex-lg-row position-relative">
+                                <img src="http://rubizhnesocks.pl.ua/wp-content/uploads/2019/02/belorus-29-min-324x324.jpg"
+                                     class="align-self-center mr-2" width="75" height="75" alt="terending">
+                                <div class="media-body">
+                                    <p class="text-muted font_size_12 p-2 mb-1 text-truncate w-50">Носки
+                                        солдатские р 25,27,29 Украина
+                                        <br>
+                                        <span class="d-block text-primary mt-2">$53 -$300</span>
+                                    </p>
+                                    <div class="d-flex flex-md-row">
+                                        <button class="btn btn-sm btn-primary font-weight-lighter font_size_12"
+                                                >
+                                            Добавить в корзину
+                                            <span class="pl-2 d-none d-lg-inline-flex">
+                                                    <i class="fas fa-cart-plus"></i></span>
+                                        </button>
+                                        <a href="#" class="btn btn-sm  btn-outline-primary font_size_12 ml-1"><i
+                                                class="far fa-eye"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section><footer class="footer">
+    <div class="bg-secondary text-muted">
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-md-3">
+                    <h2 class="text-primary text-lowercase">Магазин</h2>
+                    <p class="text-left font_size_12">«Где купить носки оптом в Украине?» При этом чтобы они были достаточно хорошего качества и напрямую от производителя, так сказать без посредников. Ну что же  я могу  Вас поздравить ответ найден. Носки от производителя «Рубіжне» оптом и в розницу, только у нас город Полтава.</p>
+                    <address class="font_size_12">
+                        <span class="text-primary px-1"><i class="fas fa-envelope"></i></span>
+                        <a class="text-primary text-decoration-none"  href="mailto:Larissa877.88@gmail.com">Larissa877.88@gmail.com</a>
+                    </address>
+                </div>
+                <div class="col-md-3">
+                    <nav class="nav flex-column text-center text-md-left">
+                        <a class="h5 nav-link text-dark disabled" href="#" tabindex="-1" aria-disabled="true">Навигацыя</a>
+                        <a class="nav-link text-muted active" href="#">Главная</a>
+                        <a class="nav-link text-muted" href="#">Купить</a>
+                        <a class="nav-link text-muted" href="#">Контакти</a>
+                    </nav>
+                </div>
+                <div class="col-md-3">
+                    <nav class="nav flex-column text-center">
+                        <a class="h5 nav-link text-dark disabled" href="#" tabindex="-1" aria-disabled="true">Адрес магазина</a>
+                        <a class="nav-link text-muted disabled font_size_12" href="#"><address>
+                            г. Полтава, ул. Шевченка 48
+                        </address></a>
+                        <a class="nav-link text-muted disabled font_size_12" href="#">производитель носков фабрика "Рубіжне"</a>
+                        <a class="nav-link text-muted disabled font_size_12" href="#">
+                            <abbr title="Phone">телефон:</abbr>
+                            +38(066) 694-6044
+                        </a>
+                        <a class="nav-link text-muted disabled font_size_12" href="#">
+                            <strong class="text-dark">Email</strong><br>
+                            <a class="text-primary text-decoration-none"  href="mailto:Larissa877.88@gmail.com">Larissa877.88@gmail.com</a>
+                        </a>
+                    </nav>
+                </div>
+                <div class="col-md-3 py-sm-4 p-md-0">
+                    <figure class="figure w-100">
+                        <figcaption class="figure-caption">
+                            <div class="d-flex justify-content-center">
+                                <div class="btn-group-icon" role="group">
+                                    <button class="btn btn-outline-dark"><span class="btn-child">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </span></button>
+                                    <button class="btn btn-outline-dark"><span class="btn-child"><i
+                                            class="fab fa-twitter"></i></span></button>
+                                    <button class="btn btn-outline-dark"><span class="btn-child"><i class="fas fa-envelope"></i></span></button>
+                                </div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>    <div class="bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex align-items-center justify-content-center py-2">
+                    <p class="text-capitalize text-white my-2">Полтава © 2019 магази носков производства "Рубіжне"</p>
+                </div>
+            </div>
+        </div>    </div>
+</footer><script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.11.2/js/all.js" data-auto-replace-svg="nest"></script>
+<script async src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script async src="assets/js/app.js"></script>
+
+</body>
+</html>
